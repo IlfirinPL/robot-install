@@ -22,3 +22,11 @@ open powershell ,paste code and execute
 ```
 
 
+## Legacy Solution for Robot Python 2.7
+### Step 1
+Install [Python 2.7.X](https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi) 
+
+### Step 2 **require** admin rights
+Install [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com/en-us/download/details.aspx?id=44266)
+### Step 3 open powershell, copy body of link and execute, later follow instructions
+https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.txt
