@@ -45,7 +45,7 @@ New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "
 
 
 $f="packages.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
-$f="packages-2.7-legacy.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
+
 
 if (Get-Command "py" -ErrorAction SilentlyContinue) 
 { 
