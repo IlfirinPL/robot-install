@@ -1,12 +1,25 @@
 $Env:PY_PYTHON=3
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 
-#$login = Read-Host "Enter CK (user login)" get user for shell
-$login = $env:USERNAME
+Write-Output "####### Input credentials#######"
+$defaultValue = $env:USERNAME
+$prompt = Read-Host "Press enter to accept to default login [$($defaultValue)]"
+$login = ($defaultValue,$prompt)[[bool]$prompt]
+
 $password = Read-Host "Enter password for CK $login" -AsSecureString
 $password = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($password)
 $password = [Runtime.InteropServices.Marshal]::PtrToStringAuto($password)
-$email = Read-Host "Provided Company Email"
+
+if (Test-Path $env:APPDATA/email.ini) {
+    $defaultValue = Get-Content -Path $env:APPDATA/email.ini
+    $prompt = Read-Host "Press enter to accept default email adress [$($defaultValue)]"
+    $email = ($defaultValue,$prompt)[[bool]$prompt]
+    New-Item -Path $env:APPDATA -Name "email.ini" -ItemType "file" -Force -Value "$email" > $null
+}
+else {
+    $email = Read-Host "Provided Company Email"
+    New-Item -Path $env:APPDATA -Name "email.ini" -ItemType "file" -Force -Value "$email" > $null
+}
 
 
 Write-Output "####### Setup Chocolatey #######"
