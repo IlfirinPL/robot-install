@@ -44,7 +44,7 @@ robotframework-autoitlibrary==1.2.4
 robotframework-databaselibrary==1.2
 robotframework-pabot==0.59
 robotframework-requests==0.5.0
-robotframework-ride==1.7.3.1 
+robotframework-ride==1.7.4a1 
 robotframework-seleniumlibrary==3.3.1
 robotframework-sshlibrary==3.3.0
 robotframework==3.0.4
