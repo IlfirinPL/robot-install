@@ -1,13 +1,14 @@
 ###### Table of content
 - [1 Install Robotframework](#1-install-robotframework)
-  * [1.1 Without Admin Rights](#11-without-admin-rights)
-    + [1.1.1 Recomended Solution Robot Framework Python 3.X](#111-recomended-solution-robot-framework-python-3x)
-      - [1.1.1.1 Python 3.X](#1111-python-3x)
-      - [1.1.1.2 PowerShell](#1112-powershell)
-    + [1.1.2 Legacy Solution for Robot Python 2.7](#112-legacy-solution-for-robot-python-27)
-      - [1.1.2.1 Python](#1121-python)
-      - [1.1.2.2 Visual Compiler for Python](#1122-visual-compiler-for-python)
-      - [1.1.2.3 PowerShell](#1123-powershell)
+  * [1.1 With Admin Rights](#11-with-admin-rights)
+  * [1.2 Without Admin Rights](#12-without-admin-rights)
+    + [1.2.1 Recomended Solution Robot Framework Python 3.X](#121-recomended-solution-robot-framework-python-3x)
+      - [1.2.1.1 Python 3.X](#1211-python-3x)
+      - [1.2.1.2 PowerShell](#1212-powershell)
+    + [1.2.2 Legacy Solution for Robot Python 2.7](#122-legacy-solution-for-robot-python-27)
+      - [1.2.2.1 Python](#1221-python)
+      - [1.2.2.2 Visual Compiler for Python](#1222-visual-compiler-for-python)
+      - [1.2.2.3 PowerShell](#1223-powershell)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -15,21 +16,30 @@
 # 1 Install Robotframework 
 Install Robot Framework from scratch by Marcin Koperski
 
+## 1.1 With Admin Rights
+open powershell, copy body of link and execute, later follow instructions
 
-## 1.1 Without Admin Rights
-### 1.1.1 Recomended Solution Robot Framework Python 3.X 
-#### 1.1.1.1 Python 3.X
+<img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="350">
+
+copy and paste content of link 
+https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-admin.txt
+
+follow instructions in shell
+
+## 1.2 Without Admin Rights
+### 1.2.1 Recomended Solution Robot Framework Python 3.X 
+#### 1.2.1.1 Python 3.X
 Install python select option "Install just for me"
 Link to [Python 3.X](https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe) 
-![Python 3.X Options](https://github.com/IlfirinPL/robot-install/raw/master/img/python3.X-setup.png)
+
+<img src="https://github.com/IlfirinPL/robot-install/raw/master/img/python3.X-setup.png" width="350">
 
 
-
-#### 1.1.1.2 PowerShell
+#### 1.2.1.2 PowerShell
 
 open powershell, copy body of link and execute, later follow instructions
 
-![Start Powershell](https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png)
+<img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="250">
 
 copy and paste content of link 
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt
@@ -37,19 +47,20 @@ https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admi
 follow instructions in shell
 
 
-### 1.1.2 Legacy Solution for Robot Python 2.7
-#### 1.1.2.1 Python
+### 1.2.2 Legacy Solution for Robot Python 2.7
+#### 1.2.2.1 Python
 Install python select option "Install just for me"
 Link to [Python 2.7.X](https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi) 
-![Python 27 Options](https://github.com/IlfirinPL/robot-install/raw/master/img/Python%202.7.17%20Setup.png)
+
+<img src="https://github.com/IlfirinPL/robot-install/raw/master/img/Python%202.7.17%20Setup.png" width="250">
 
 
-
-#### 1.1.2.2 Visual Compiler for Python
+#### 1.2.2.2 Visual Compiler for Python
 Install [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com/en-us/download/details.aspx?id=44266)
-#### 1.1.2.3 PowerShell
+#### 1.2.2.3 PowerShell
 open powershell, copy body of link and execute, later follow instructions
-![Start Powershell](https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png)
+
+<img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="250">
 
 copy and paste content of link 
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.txt
