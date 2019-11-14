@@ -34,9 +34,22 @@ New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "
 
 $Env:PY_PYTHON=2
 
-
-py -m pip install -U pip wheel pywin32 setuptools
 $f="packages-2.7-legacy.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
-py -m pip install -U -r $env:temp/$f
-py -m robot --version
-Write-Output "####### Type To start RIDE `npy -m robotide.__init__`n##################"
+
+if (Get-Command "py" -ErrorAction SilentlyContinue) 
+{ 
+    py -m pip install -U pip wheel pywin32 setuptools
+    py -m pip install -U -r $env:temp/$f
+    py -m robot --version
+    Write-Output "####### Type To start RIDE `npy -m robotide.__init__`n##################"
+}
+else{
+    python -m pip install -U pip wheel pywin32 setuptools
+    python -m pip install -U -r $env:temp/$f
+    python -m robot --version
+    Write-Output "####### Type To start RIDE `npython -m robotide.__init__`n##################"
+}
+
+
+
+
