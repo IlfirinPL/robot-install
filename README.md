@@ -24,7 +24,9 @@ open powershell ,paste code and execute
 
 ## Legacy Solution for Robot Python 2.7
 ### Step 1
-Install for single user [Python 2.7.X](https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi) 
+Install python select option "Install just for me"
+
+[Python 2.7.X](https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi) 
 
 ### Step 2 
 Install [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com/en-us/download/details.aspx?id=44266)
