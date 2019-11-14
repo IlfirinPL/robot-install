@@ -33,6 +33,9 @@ New-Item -itemtype directory $env:APPDATA/pip -Force
 New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "[global]`nindex-url = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`ntrusted-host = artifactory.inspol.biz`n               pypi.python.org`n               pypi.org`n               files.pythonhosted.org`n`n[install]`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple"
 
 $Env:PY_PYTHON=2
+
+
 python -m pip install -U pip wheel pywin32 setuptools
-python -m pip install -U -r https://raw.githubusercontent.com/IlfirinPL/robot-install/master/packages-2.7-legacy.txt
+$f="packages-2.7-legacy.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/$f -OutFile $env:temp/$f 
+python -m pip install -U -r $env:temp/$f
 robot --version
