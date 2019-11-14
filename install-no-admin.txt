@@ -9,7 +9,7 @@ $password = [Runtime.InteropServices.Marshal]::PtrToStringAuto($password)
 $email = Read-Host "Provided Company Email"
 
 
-
+Write-Output "####### Setup Chocolatey #######"
 if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) )
 { 
   # Set directory for installation - Chocolatey does not lock
@@ -36,16 +36,32 @@ if (-Not (Get-Command "git" -ErrorAction SilentlyContinue))
 } 
 git --version
 
-Write-Output "####### Setup Git start"
+
+if (Get-Command "npm" -ErrorAction SilentlyContinue)
+{
+  Write-Output "####### Setup Git npm #######"
+  npm config set registry https://artifactory.inspol.biz/api/npm/npm-virtual/ 
+  npm config set always-auth=true 
+  npm config set strict-ssl=false 
+
+}
+
+
+
+Write-Output "####### Setup Git #######"
 git config --global http.proxy ${login}:${password}@spplapp10200:8080
 git config --global user.email "${email}"
+git config --global http.sslVerify false
+
+
+Write-Output "####### Setup PIP"
 New-Item -itemtype directory $env:APPDATA/pip -Force 
 New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "[global]`nindex-url = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`ntrusted-host = artifactory.inspol.biz`n               pypi.python.org`n               pypi.org`n               files.pythonhosted.org`n`n[install]`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple"
 
 
 
+Write-Output "####### Setup RobotFramework #######"
 $f="packages.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
-
 
 if (Get-Command "py" -ErrorAction SilentlyContinue) 
 { 
