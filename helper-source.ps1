@@ -6,4 +6,4 @@ Write-Host "XXX" $FileName
 Remove-Item $FileName  
 }
 
-sourceRemote "system-info.ps1"
+
