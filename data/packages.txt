@@ -27,7 +27,6 @@ robotframework-jsonlibrary
 robotframework-MarcinKoperski
 robotframework-pabot
 robotframework-requests
-robotframework-requests
 robotframework-ride==1.7.4b2
 robotframework-seleniumlibrary
 robotframework-sshlibrary
