@@ -1,1 +1,0 @@
-Write $env:computername
