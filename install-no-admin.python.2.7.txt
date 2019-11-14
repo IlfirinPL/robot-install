@@ -34,5 +34,5 @@ New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "
 
 $Env:PY_PYTHON=2
 python -m pip install -U pip wheel pywin32 setuptools
-python -m pip install -U -r ./packages-2.7.txt
+python -m pip install -U -r https://raw.githubusercontent.com/IlfirinPL/robot-install/master/packages-2.7-legacy.txt
 robot --version
