@@ -4,7 +4,7 @@ cffi
 coverage==4.2
 Cython
 datetime
-git+https://github.com/IlfirinPL/robotframework-MarcinKoperski.git
+robotframework-MarcinKoperski
 jsonpath-ng>=1.4.3
 lxml
 oauth2client 
@@ -14,7 +14,6 @@ psutil
 Pygments # This enables syntax highlighted in Text Editor
 PyPDF2
 Pypubsub ; python_version > '2.7'
-Pypubsub==3.3.0 ; python_version <= '2.7'
 python-dateutil
 Pywin32; sys_platform == 'win32'
 pyyaml
