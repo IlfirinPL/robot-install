@@ -38,4 +38,5 @@ $Env:PY_PYTHON=2
 py -m pip install -U pip wheel pywin32 setuptools
 $f="packages-2.7-legacy.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
 py -m pip install -U -r $env:temp/$f
-robot --version
+py -m robot --version
+Write-Output "####### Type To start RIDE `npy -m robotide.__init__`n##################"
