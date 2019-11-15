@@ -6,6 +6,7 @@ Cython
 datetime
 robotframework-MarcinKoperski
 jsonpath-ng>=1.4.3
+pywin32
 lxml
 oauth2client 
 openpyxl
