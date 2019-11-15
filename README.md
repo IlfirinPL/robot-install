@@ -22,6 +22,7 @@ open powershell, copy body of link and execute, later follow instructions
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
 copy and paste content of link 
+
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-admin.txt
 
 follow instructions in shell
@@ -42,6 +43,7 @@ open powershell, copy body of link and execute, later follow instructions
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
 copy and paste content of link 
+
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt
 
 follow instructions in shell
@@ -63,6 +65,7 @@ open powershell, copy body of link and execute, later follow instructions
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
 copy and paste content of link 
+
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.txt
 
 follow instructions in shell
