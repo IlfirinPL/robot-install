@@ -1,4 +1,4 @@
-$Env:PY_PYTHON=3
+$Env:PY_PYTHON=3.7
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 
 Write-Output "####### Input credentials#######"
@@ -84,7 +84,7 @@ if (Get-Command "py" -ErrorAction SilentlyContinue)
     Write-Output "####### Type To start RIDE `npy -m robotide.__init__`n##################"
 }
 else {
-    python -m pip install -U pip wheel pywin32 setuptools
+    python -m pip install -U pip wheel setuptools
     python -m pip install -U -r $env:temp/$f
     python -m robot --version
     Write-Output "####### Type To start RIDE `npython -m robotide.__init__`n##################"
