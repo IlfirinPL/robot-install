@@ -25,7 +25,6 @@ robotframework-faker
 robotframework-ftplibrary
 robotframework-httplibrary
 robotframework-jsonlibrary
-robotframework-MarcinKoperski
 robotframework-pabot
 robotframework-requests
 robotframework-ride==1.7.4b2
