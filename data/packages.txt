@@ -11,6 +11,7 @@ oauth2client
 openpyxl
 pillow>=2.9.0
 psutil
+PyMySQL
 Pygments # This enables syntax highlighted in Text Editor
 PyPDF2
 Pypubsub ; python_version > '2.7'
