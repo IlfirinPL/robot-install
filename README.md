@@ -72,3 +72,9 @@ copy and paste content of link
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.txt
 
 follow instructions in shell
+
+#### 1.2.2.4 JAVA_JDK require ADMIN
+open powershell as admin, copy body of link and execute, later follow instructions
+```
+choco install jdk8 -y
+```
