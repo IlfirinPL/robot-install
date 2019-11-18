@@ -9,6 +9,7 @@
       - [1.2.2.1 Python](#1221-python)
       - [1.2.2.2 Visual Compiler for Python](#1222-visual-compiler-for-python)
       - [1.2.2.3 PowerShell](#1223-powershell)
+      - [1.2.2.4 JAVA_JDK require ADMIN](#1224-java-jdk-require-admin)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
