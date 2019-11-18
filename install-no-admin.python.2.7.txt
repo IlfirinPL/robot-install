@@ -38,21 +38,21 @@ if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) )
   # https://chocolatey.org/install
   iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
-choco --version
+choco --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
 
 
 if (-Not (Get-Command "git" -ErrorAction SilentlyContinue))
 {
-  choco install git 
+  choco install git | Tee-Object -FilePath $env:temp/robot-install.log -Append
   $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
   
 } 
-git --version
+git --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
 
 Write-Output "####### Setup Git start"
 git config --global http.proxy ${login}:${password}@spplapp10200:8080
-git config --global user.email "${email}"
-Write-Output "####### Setup PIP"
+git config --global user.email "${email}" | Tee-Object -FilePath $env:temp/robot-install.log -Append
+Write-Output "####### Setup PIP" 
 New-Item -itemtype directory $env:APPDATA/pip -Force > $null
 New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "[global]`nindex-url = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`ntrusted-host = artifactory.inspol.biz`n               pypi.python.org`n               pypi.org`n               files.pythonhosted.org`n`n[install]`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple" > $null
 
@@ -62,15 +62,15 @@ $f="packages-2.7-legacy.txt"; Invoke-WebRequest -Uri https://raw.githubuserconte
 
 if (Get-Command "py" -ErrorAction SilentlyContinue) 
 { 
-    py -m pip install -U pip wheel setuptools
-    py -m pip install -U -r $env:temp/$f
-    py -m robot --version
+    py -m pip install -U pip wheel setuptools | Tee-Object -FilePath $env:temp/robot-install.log -Append
+    py -m pip install -U -r $env:temp/$f | Tee-Object -FilePath $env:temp/robot-install.log -Append
+    py -m robot --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
     Write-Output "####### Type To start RIDE `npy -m robotide.__init__`n##################"
 }
 else {
-    python -m pip install -U pip wheel setuptools
-    python -m pip install -U -r $env:temp/$f
-    python -m robot --version
+    python -m pip install -U pip wheel setuptools | Tee-Object -FilePath $env:temp/robot-install.log -Append
+    python -m pip install -U -r $env:temp/$f | Tee-Object -FilePath $env:temp/robot-install.log -Append
+    python -m robot --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
     Write-Output "####### Type To start RIDE `npython -m robotide.__init__`n##################"
 }
 
