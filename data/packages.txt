@@ -6,6 +6,7 @@ Cython
 datetime
 jsonpath-ng>=1.4.3
 lxml
+JayDeBeApi
 oauth2client 
 openpyxl
 pillow>=2.9.0
