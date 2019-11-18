@@ -43,7 +43,7 @@ choco --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
 
 if (-Not (Get-Command "git" -ErrorAction SilentlyContinue))
 {
-  choco install git | Tee-Object -FilePath $env:temp/robot-install.log -Append
+  choco install git -y | Tee-Object -FilePath $env:temp/robot-install.log -Append
   $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
   
 } 
