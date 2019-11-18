@@ -1,6 +1,7 @@
 adodbapi
 cffi
 coverage==4.2
+cparser 
 Cython
 datetime
 jsonpath-ng>=1.4.3
