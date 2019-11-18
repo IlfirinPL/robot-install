@@ -1,12 +1,9 @@
-#requests3
 adodbapi
 cffi
 coverage==4.2
 Cython
 datetime
-robotframework-MarcinKoperski
 jsonpath-ng>=1.4.3
-pywin32
 lxml
 oauth2client 
 openpyxl
@@ -16,8 +13,10 @@ Pygments # This enables syntax highlighted in Text Editor
 PyPDF2
 Pypubsub ; python_version > '2.7'
 python-dateutil
+pywin32
 Pywin32; sys_platform == 'win32'
 pyyaml
+requests3
 robotframework
 robotframework-archivelibrary
 robotframework-databaselibrary
@@ -25,6 +24,7 @@ robotframework-faker
 robotframework-ftplibrary
 robotframework-httplibrary
 robotframework-jsonlibrary
+robotframework-MarcinKoperski
 robotframework-pabot
 robotframework-requests
 robotframework-ride==1.7.4b2
