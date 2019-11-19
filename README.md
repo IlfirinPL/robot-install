@@ -30,7 +30,7 @@ follow instructions in shell
 
 ## 1.2 Without Admin Rights
 ### 1.2.1 Recomended Solution Robot Framework Python 3.X 
-#### 1.2.1.1 Python 3.X
+#### 1.2.1.1 Python 3.X x64
 Install python select option "Install just for me"
 Link to [Python 3.X](https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe) 
 
@@ -51,9 +51,9 @@ follow instructions in shell
 
 
 ### 1.2.2 Legacy Solution for Robot Python 2.7
-#### 1.2.2.1 Python
+#### 1.2.2.1 Python x64
 Install python select option "Install just for me"
-Link to [Python 2.7.X](https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi) 
+Link to [Python 2.7.X x64](https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi) 
 
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/Python%202.7.17%20Setup.png" width="300">
 
