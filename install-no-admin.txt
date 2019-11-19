@@ -54,7 +54,7 @@ git --version
 
 if (Get-Command "npm" -ErrorAction SilentlyContinue)
 {
-  Write-Output "####### Setup Git npm #######"
+  Write-Output "####### Setup npm #######"
   npm config set registry https://artifactory.inspol.biz/api/npm/npm-virtual/ 
   npm config set always-auth=true 
   npm config set strict-ssl=false 
