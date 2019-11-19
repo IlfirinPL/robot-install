@@ -4,22 +4,20 @@ coverage==4.2
 cparser 
 Cython
 datetime
+JayDeBeApi
 jsonpath-ng>=1.4.3
 lxml
-JayDeBeApi
 oauth2client 
 openpyxl
 pillow>=2.9.0
+pipdeptree
 psutil
-pyodbc # replacement of  pymssql
-sqlalchemy_pyodbc_mssql # replacement of  pymssql https://github.com/level12/sqlalchemy_pyodbc_mssql
+Pygments
 PyMySQL
-Pygments # This enables syntax highlighted in Text Editor
+pyodbc 
 PyPDF2
 Pypubsub ; python_version > '2.7'
 python-dateutil
-pywin32
-pipdeptree
 Pywin32; sys_platform == 'win32'
 pyyaml
 requests3
@@ -30,16 +28,17 @@ robotframework-faker
 robotframework-ftplibrary
 robotframework-httplibrary
 robotframework-jsonlibrary
+robotframework-MarcinKoperski
 robotframework-pabot
 robotframework-requests
 robotframework-ride==1.7.4b2
 robotframework-seleniumlibrary
 robotframework-sshlibrary
-robotframework-MarcinKoperski
-robotframeworklexer # Updates lexer to newer RF 3.1.1
+robotframeworklexer
 robotremoteserver
 selenium
 setuptools
+sqlalchemy_pyodbc_mssql
 unicodecsv
 wxPython
 xlrd
