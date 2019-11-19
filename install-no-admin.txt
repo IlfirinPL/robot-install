@@ -79,7 +79,7 @@ else {
 }
 
 
-$SEL = Select-String -Path $env:APPDATA/pip -Pattern "https://artifactory.inspol.biz/api/pypi/pypi/simple"
+$SEL = Select-String -Path $env:APPDATA/pip/pip.ini -Pattern "https://artifactory.inspol.biz/api/pypi/pypi/simple"
 if ($SEL -ne $null) {
     Write-Output "####### Setup PIP ####### ***SKIP***"
 }
