@@ -94,7 +94,6 @@ else {
     New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "[global]`nindex-url = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`ntrusted-host = artifactory.inspol.biz`n               pypi.python.org`n               pypi.org`n               files.pythonhosted.org`n`n[install]`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple" > $null
 }
 
-
 Write-Output "####### Setup RobotFramework #######"
 $f = "packages.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
 
@@ -111,4 +110,4 @@ else {
     Write-Output "####### Type To start RIDE `npython -m robotide.__init__`n##################"
 }
 
-Write-Output "### Installation time is: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))
+Write-Output "### Installation time is: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))"
