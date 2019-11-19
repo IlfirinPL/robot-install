@@ -110,4 +110,4 @@ else {
     python -m robot --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
     Write-Output "####### Type To start RIDE `npython -m robotide.__init__`n##################"
 }
-Write-Output "### Installation time is: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))
+Write-Output "### Installation time is: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))"
