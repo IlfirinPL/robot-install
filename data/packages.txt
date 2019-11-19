@@ -35,6 +35,7 @@ robotframework-requests
 robotframework-ride==1.7.4b2
 robotframework-seleniumlibrary
 robotframework-sshlibrary
+robotframework-MarcinKoperski
 robotframeworklexer # Updates lexer to newer RF 3.1.1
 robotremoteserver
 selenium
