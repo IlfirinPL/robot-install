@@ -29,7 +29,7 @@ https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-admin.t
 follow instructions in shell
 
 ## 1.2 Without Admin Rights
-### 1.2.1 Recomended Solution Robot Framework Python 3.X 
+### 1.2.1 Recomended Solution Robot Framework Python 3.X  x64
 #### 1.2.1.1 Python 3.X x64
 Install python select option "Install just for me"
 Link to [Python 3.X](https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe) 
