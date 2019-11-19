@@ -1,3 +1,4 @@
+$StartDate=(GET-DATE)
 $Env:PY_PYTHON = 2
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 
@@ -109,3 +110,4 @@ else {
     python -m robot --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
     Write-Output "####### Type To start RIDE `npython -m robotide.__init__`n##################"
 }
+Write-Output "### Installation time is: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))
