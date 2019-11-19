@@ -53,7 +53,7 @@ follow instructions in shell
 ### 1.2.2 Legacy Solution for Robot Python 2.7
 #### 1.2.2.1 Python
 Install python select option "Install just for me"
-Link to [Python 2.7.X](https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi) 
+Link to [Python 2.7.X](https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi) 
 
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/Python%202.7.17%20Setup.png" width="300">
 
