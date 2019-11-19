@@ -1,3 +1,4 @@
+$StartDate=(GET-DATE)
 $Env:PY_PYTHON = 3.7
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 
@@ -109,3 +110,5 @@ else {
     python -m robot --version 
     Write-Output "####### Type To start RIDE `npython -m robotide.__init__`n##################"
 }
+
+Write-Output "### Installation time is: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))
