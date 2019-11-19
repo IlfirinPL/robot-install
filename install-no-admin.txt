@@ -1,85 +1,99 @@
-$Env:PY_PYTHON=3.7
+$Env:PY_PYTHON = 3.7
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 
-Write-Output "####### Input credentials#######"
-
-if (Test-Path $env:APPDATA/email.ini) {
-    $defaultValue = Get-Content -Path $env:APPDATA/email.ini
-    $prompt = Read-Host "Press enter to accept default email adress [$($defaultValue)]"
-    $email = ($defaultValue,$prompt)[[bool]$prompt]
-    New-Item -Path $env:APPDATA -Name "email.ini" -ItemType "file" -Force -Value "$email" > $null
-}
-else {
-    $email = Read-Host "Provided Company Email"
-    New-Item -Path $env:APPDATA -Name "email.ini" -ItemType "file" -Force -Value "$email" > $null
-}
-
-$defaultValue = $env:USERNAME
-$prompt = Read-Host "Press enter to accept to default login [$($defaultValue)]"
-$login = ($defaultValue,$prompt)[[bool]$prompt]
-
-$password = Read-Host "Enter password for CK $login" -AsSecureString
-$password = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($password)
-$password = [Runtime.InteropServices.Marshal]::PtrToStringAuto($password)
-
-
-
 Write-Output "####### Setup Chocolatey #######"
-if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) )
-{ 
-  Set-ExecutionPolicy Bypass -Scope Process -Force;
-  # Set directory for installation - Chocolatey does not lock
-  # down the directory if not the default
-  $InstallDir='C:\ProgramData\chocoportable'
-  $env:ChocolateyInstall="$InstallDir"
+if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) ) { 
+    Set-ExecutionPolicy Bypass -Scope Process -Force;
+    # Set directory for installation - Chocolatey does not lock
+    # down the directory if not the default
+    $InstallDir = 'C:\ProgramData\chocoportable'
+    $env:ChocolateyInstall = "$InstallDir"
 
-  # If your PowerShell Execution policy is restrictive, you may
-  # not be able to get around that. Try setting your session to
-  # Bypass.
+    # If your PowerShell Execution policy is restrictive, you may
+    # not be able to get around that. Try setting your session to
+    # Bypass.
 
-  # All install options - offline, proxy, etc at
-  # https://chocolatey.org/install
-  iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    # All install options - offline, proxy, etc at
+    # https://chocolatey.org/install
+    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
-choco --version | Tee-Object -FilePath $env:temp/robot-install.log -Append
 
-if (-Not (Get-Command "git" -ErrorAction SilentlyContinue))
-{
-  choco install git | Tee-Object -FilePath $env:temp/robot-install.log -Append
-  $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+choco --version 
+
+if (-Not (Get-Command "git" -ErrorAction SilentlyContinue)) {
+    choco install git | Tee-Object -FilePath $env:temp/robot-install.log -Append
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
   
 } 
 git --version
 
 
-if (Get-Command "npm" -ErrorAction SilentlyContinue)
-{
-  Write-Output "####### Setup npm #######"
-  npm config set registry https://artifactory.inspol.biz/api/npm/npm-virtual/ 
-  npm config set always-auth=true 
-  npm config set strict-ssl=false 
+if (Get-Command "npm" -ErrorAction SilentlyContinue) {
+    Write-Output "####### Setup npm #######"
+    npm config set registry https://artifactory.inspol.biz/api/npm/npm-virtual/ 
+    npm config set always-auth=true 
+    npm config set strict-ssl=false 
 
 }
 
 
 
-Write-Output "####### Setup Git #######"
-git config --global http.proxy ${login}:${password}@spplapp10200:8080
-git config --global user.email "${email}" 
-git config --global http.sslVerify false 
+$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "proxy"
+if ($SEL -ne $null) {
+    Write-Output "####### Setup Git PROXY ####### ***SKIP***"
+}
+else {
+    Write-Output "####### Setup Git PROXY #######"
+    $defaultValue = $env:USERNAME
+    $prompt = Read-Host "Press enter to accept to default login [$($defaultValue)]"
+    $login = ($defaultValue, $prompt)[[bool]$prompt]
+
+    $password = Read-Host "Enter password for CK $login" -AsSecureString
+    $password = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($password)
+    $password = [Runtime.InteropServices.Marshal]::PtrToStringAuto($password)
+
+    git config --global http.proxy ${login}:${password}@spplapp10200:8080
+    git config --global http.sslVerify false 
+}
 
 
-Write-Output "####### Setup PIP"
-New-Item -itemtype directory $env:APPDATA/pip -Force > $null
-New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "[global]`nindex-url = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`ntrusted-host = artifactory.inspol.biz`n               pypi.python.org`n               pypi.org`n               files.pythonhosted.org`n`n[install]`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple" > $null
+$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "email"
+if ($SEL -ne $null) {
+    Write-Output "####### Setup Git EMAIL ####### ***SKIP***"
+}
+else {
+    Write-Output "####### Setup Git EMAIL #######"
+    if (Test-Path $env:APPDATA/email.ini) {
+        $defaultValue = Get-Content -Path $env:APPDATA/email.ini
+        $prompt = Read-Host "Press enter to accept default email adress [$($defaultValue)]"
+        $email = ($defaultValue, $prompt)[[bool]$prompt]
+        New-Item -Path $env:APPDATA -Name "email.ini" -ItemType "file" -Force -Value "$email" > $null
+    }
+    else {
+        $email = Read-Host "Provided Company Email"
+        New-Item -Path $env:APPDATA -Name "email.ini" -ItemType "file" -Force -Value "$email" > $null
+    }
+    
 
+    git config --global user.email "${email}" 
+}
+
+
+$SEL = Select-String -Path $env:APPDATA/pip -Pattern "https://artifactory.inspol.biz/api/pypi/pypi/simple"
+if ($SEL -ne $null) {
+    Write-Output "####### Setup PIP ####### ***SKIP***"
+}
+else {
+    Write-Output "####### Setup PIP"
+    New-Item -itemtype directory $env:APPDATA/pip -Force > $null
+    New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "[global]`nindex-url = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`ntrusted-host = artifactory.inspol.biz`n               pypi.python.org`n               pypi.org`n               files.pythonhosted.org`n`n[install]`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple" > $null
+}
 
 
 Write-Output "####### Setup RobotFramework #######"
-$f="packages.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
+$f = "packages.txt"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/data/$f -OutFile $env:temp/$f 
 
-if (Get-Command "py" -ErrorAction SilentlyContinue) 
-{ 
+if (Get-Command "py" -ErrorAction SilentlyContinue) { 
     py -m pip install -U --no-cache-dir pip wheel setuptools 
     py -m pip install -U --no-cache-dir -r $env:temp/$f 
     py -m robot --version 
