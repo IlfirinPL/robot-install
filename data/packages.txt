@@ -11,8 +11,8 @@ oauth2client
 openpyxl
 pillow>=2.9.0
 psutil
-pyodbc ; replacement of  pymssql
-sqlalchemy_pyodbc_mssql ; replacement of  pymssql https://github.com/level12/sqlalchemy_pyodbc_mssql
+pyodbc # replacement of  pymssql
+sqlalchemy_pyodbc_mssql # replacement of  pymssql https://github.com/level12/sqlalchemy_pyodbc_mssql
 PyMySQL
 Pygments # This enables syntax highlighted in Text Editor
 PyPDF2
