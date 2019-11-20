@@ -48,7 +48,7 @@ py --version
 
 #### 1.2.1.2 PowerShell
 
-open powershell, copy body of link and execute, later follow instructions
+open powershell, **copy** body of link and execute, later follow instructions
 
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
