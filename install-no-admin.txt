@@ -115,3 +115,4 @@ $f = "RIDE-3.7.cmd"; Invoke-WebRequest -Uri https://raw.githubusercontent.com/Il
 
 Write-Output "### Installation Done. Time used: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))"
 Write-Output "####### to start RIDE using Python 3.7 execute shortcut from Home Dir `n`n$env:HOMEDRIVE/$f`n`n#######"
+explorer.exe $env:HOMEDRIVE
