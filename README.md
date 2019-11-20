@@ -47,7 +47,7 @@ py --version
 
 #### 1.2 PowerShell
 
-open powershell, **copy** body of link and execute, later follow instructions
+open powershell, **copy** and paste, later follow instructions
 
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
@@ -56,7 +56,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;Invoke-WebRequest -Uri https://
 ```
 or 
 
-copy and paste content of link 
+open powershell, copy and paste content of link below , later follow instructions
+
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt
 follow instructions in shell
 
