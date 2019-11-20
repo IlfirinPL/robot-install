@@ -51,10 +51,13 @@ open powershell, **copy** body of link and execute, later follow instructions
 
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
+```
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt -OutFile $env:HOMEDRIVE/install-no-admin.ps1; & "$env:HOMEDRIVE/install-no-admin.ps1"
+```
+or 
+
 copy and paste content of link 
-
 https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt
-
 follow instructions in shell
 
 
@@ -75,6 +78,10 @@ Install [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com
 open powershell, copy body of link and execute, later follow instructions
 
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
+
+```
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.txt -OutFile $env:HOMEDRIVE/install-no-admin.python.2.7.ps1; & "$env:HOMEDRIVE/install-no-admin.python.2.7.ps1"
+```
 
 copy and paste content of link 
 
