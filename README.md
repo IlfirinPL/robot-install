@@ -41,7 +41,10 @@ $start_time = Get-Date
 Import-Module BitsTransfer
 Start-BitsTransfer -Source $url -Destination $output
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
-& "$env:USERPROFILE/Downloads/python-3.7.5-amd64.exe"
+& "$env:USERPROFILE/Downloads/python-3.7.5-amd64.exe" /quiet InstallAllUsers=0 InstallLauncherAllUsers=0
+Write-Output "Time taken with install: $((Get-Date).Subtract($start_time).Seconds) second(s)"
+py -0
+py --version
 ```
 
 
