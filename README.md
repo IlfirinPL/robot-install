@@ -52,7 +52,7 @@ open powershell, **copy** body of link and execute, later follow instructions
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
 ```
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt -OutFile $env:HOMEDRIVE/install-no-admin.ps1; & "$env:HOMEDRIVE/install-no-admin.ps1"
+Set-ExecutionPolicy Bypass -Scope Process -Force;Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt -OutFile $env:HOMEDRIVE/install-no-admin.ps1; & "$env:HOMEDRIVE/install-no-admin.ps1"
 ```
 or 
 
@@ -80,7 +80,7 @@ open powershell, copy body of link and execute, later follow instructions
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/powershell.png" width="200">
 
 ```
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.txt -OutFile $env:HOMEDRIVE/install-no-admin.python.2.7.ps1; & "$env:HOMEDRIVE/install-no-admin.python.2.7.ps1"
+Set-ExecutionPolicy Bypass -Scope Process -Force;Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.txt -OutFile $env:HOMEDRIVE/install-no-admin.python.2.7.ps1; & "$env:HOMEDRIVE/install-no-admin.python.2.7.ps1"
 ```
 
 copy and paste content of link 
