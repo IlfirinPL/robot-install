@@ -31,8 +31,6 @@ follow instructions in shell
 ## 1.2 Without Admin Rights
 ### 1.2.1 Recomended Solution Robot Framework Python 3.X  x64
 #### 1.2.1.1 Python 3.X x64
-Install python select option "Install just for me"
-Link to [Python 3.X](https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe) 
 
 ```powershell
 $url = "https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe"
@@ -46,9 +44,6 @@ Write-Output "Time taken with install: $((Get-Date).Subtract($start_time).Second
 py -0
 py --version
 ```
-
-
-<img src="https://github.com/IlfirinPL/robot-install/raw/master/img/python3.X-setup.png" width="300">
 
 
 #### 1.2.1.2 PowerShell
