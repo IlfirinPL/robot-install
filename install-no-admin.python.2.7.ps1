@@ -4,11 +4,12 @@ $Env:PY_PYTHON = 2.7
 
 timerStart
 
-sourceRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/chocolatey-non-admin.ps1
-sourceRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/git-install-setup.ps1
-sourceRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/npm-config.ps1
-sourceRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/pip-config.ps1
-sourceRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/install-robot-2.7.ps1
+sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/chocolatey-non-admin.ps1
+sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/git-install-setup.ps1
+sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/npm-config.ps1
+sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/pip-config.ps1
+sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/install-robot-2.7.ps1
+sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/systemInfo.ps1
 
 explorer.exe $env:HOMEDRIVE
 
