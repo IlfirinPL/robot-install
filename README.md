@@ -30,8 +30,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ### 2 Legacy Solution for Robot Python 2.7
 #### 2.1 Python x64
 Install python select option "Install just for me"
-Link to [Python 2.7.X x64](https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi) 
-
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/python2-downlad-install.ps1'))
+```
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/Python%202.7.17%20Setup.png" width="300">
 
 
