@@ -20,7 +20,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 
 
-#### 1.2 Install/Setup git robot-framework
+#### 1.2 Install/Setup Git Robot Framework
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.ps1'))
@@ -40,7 +40,7 @@ Install [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com
 
 <img src="https://github.com/IlfirinPL/robot-install/raw/master/img/VC27.png" width="300">
 
-#### 2.3 PowerShell
+#### 2.3 Install/Setup Git Robot Framework
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
 
 ```powershell
