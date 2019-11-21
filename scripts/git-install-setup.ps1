@@ -1,5 +1,5 @@
 
-$proxyHost=spplapp10200:8080
+$env:proxyHostTemp="spplapp10200:8080"
 
 $SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "proxy"
 if ($SEL -ne $null) {
@@ -52,7 +52,7 @@ if ($SEL -ne $null) {
 }
 else {
 
-    git config --global http.proxy ${login}:${password}@$proxyHost
+    git config --global http.proxy ${login}:${password}@$(env:proxyHostTemp)
     git config --global http.sslVerify false 
 }
 
