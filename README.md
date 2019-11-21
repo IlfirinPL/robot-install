@@ -14,13 +14,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;Invoke-WebRequest -Uri https://
 #### 1.1 Install Python 3.X x64
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
 ```powershell
-$url = "https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe" ;$output = "$env:USERPROFILE/Downloads" ;$start_time = Get-Date; Import-Module BitsTransfer ; Start-BitsTransfer -Source $url -Destination $output; Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)" ; & "$env:USERPROFILE/Downloads/python-3.7.5-amd64.exe"
+$url = "https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe" ; $output = "$env:USERPROFILE/Downloads" ; $start_time = Get-Date; Import-Module BitsTransfer ; Start-BitsTransfer -Source $url -Destination $output; Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)" ; & "$env:USERPROFILE/Downloads/python-3.7.5-amd64.exe"
 ```
 
 #### 1.2 Install/Setup git robot-framework
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force;Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt -OutFile $env:HOMEDRIVE/install-no-admin.ps1; & "$env:HOMEDRIVE/install-no-admin.ps1"
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.txt -OutFile $env:HOMEDRIVE/install-no-admin.ps1; & "$env:HOMEDRIVE/install-no-admin.ps1"
 ```
 
 ### 2 Legacy Solution for Robot Python 2.7
