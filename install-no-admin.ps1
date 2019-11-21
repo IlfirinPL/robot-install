@@ -9,7 +9,7 @@ sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master
 sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/npm-config.ps1
 sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/pip-config.ps1
 sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/install-robot-3.ps1
-
+sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/systemInfo.ps1
 
 explorer.exe $env:HOMEDRIVE
 
