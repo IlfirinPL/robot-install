@@ -5,8 +5,9 @@ Install Robot Framework from scratch by Marcin Koperski
 
 ## With Admin Rights
 Execute in powershell with admin rights (hint  Triple-click to select whole line), follow instructions
-```
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.ps1 -OutFile $env:HOMEDRIVE/install-admin.txt;Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:HOMEDRIVE/install-admin.txt"
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-admin.ps1'))
+
 ```
 
 ## Without Admin Rights
@@ -20,7 +21,8 @@ $url = "https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe" ; $outpu
 #### 1.2 Install/Setup git robot-framework
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
 ```powershell
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.ps1 -OutFile $env:HOMEDRIVE/install-no-admin.ps1;Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:HOMEDRIVE/install-no-admin.ps1"
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.ps1'))
+
 ```
 
 ### 2 Legacy Solution for Robot Python 2.7
@@ -40,7 +42,7 @@ Install [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
 
 ```powershell
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.ps1 -OutFile $env:HOMEDRIVE/install-no-admin.python.2.7.ps1;Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:HOMEDRIVE/install-no-admin.python.2.7.ps1"
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IlfirinPL/robot-install/master/install-no-admin.python.2.7.ps1'))
 ```
 
 #### 2.4 JAVA_JDK require ADMIN
