@@ -1,9 +1,3 @@
-function sourceRemote ($filename){
-
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install/master/$FileName -OutFile $FileName   
-Write-Host "XXX" $FileName
-. ./$FileName 
-Remove-Item $FileName  
-}
-
+function sourceRemote ($url) { Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-WebRequest -Uri $url -OutFile $env:tmp/tmp.ps1 ;   & "$env:tmp/tmp.ps1" ; }
+function copyRemote ($url,$destPath) { Invoke-WebRequest -Uri $url -OutFile $destPath  }
 
