@@ -15,8 +15,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 #### 1.1 Install Python 3.X x64
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
 ```powershell
-$url = "https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe" ; $output = "$env:USERPROFILE/Downloads" ; $start_time = Get-Date; Import-Module BitsTransfer ; Start-BitsTransfer -Source $url -Destination $output; Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)" ; & "$env:USERPROFILE/Downloads/python-3.7.5-amd64.exe"
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/IlfirinPL/robot-install/master/scripts/python-downlad-install.ps1'))
 ```
+
+
 
 #### 1.2 Install/Setup git robot-framework
 Execute in powershell (hint  Triple-click to select whole line), follow instructions
