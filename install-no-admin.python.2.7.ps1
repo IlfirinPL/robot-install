@@ -13,4 +13,4 @@ sourceRemoteExp https://raw.githubusercontent.com/IlfirinPL/robot-install/master
 
 explorer.exe $env:HOMEDRIVE
 
-timerStop  "### Installation Done. Time used: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))"
+timerStop  "### Installation Done. Time used:"
