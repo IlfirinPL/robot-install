@@ -1,7 +1,7 @@
 
 $env:proxyHostTemp="spplapp10200:8080"
 
-$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "proxy"
+$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "proxy" 2> $null
 if ($SEL -ne $null) {
     Write-Output "####### Setup Git PROXY ####### ***SKIP***"
 }
@@ -18,7 +18,7 @@ else {
 }
 
 
-$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "email" 
+$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "email"  2> $null
 if ($SEL -ne $null) {
     Write-Output "####### Setup Git EMAIL ####### ***SKIP***"
 }
@@ -47,7 +47,7 @@ if (-Not (Get-Command "git" -ErrorAction SilentlyContinue)) {
 git --version
 
 
-$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "proxy"
+$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "proxy" 2> $null
 if ($SEL -ne $null) {
 }
 else {
@@ -57,7 +57,7 @@ else {
 }
 
 
-$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "email"
+$SEL = Select-String -Path $env:HOMEDRIVE/.gitconfig -Pattern "email" 2> $null
 if ($SEL -ne $null) {
 }
 else {
