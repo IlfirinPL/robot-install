@@ -8,3 +8,13 @@ else {
     New-Item -itemtype directory $env:APPDATA/pip -Force > $null
     New-Item -Path $env:APPDATA/pip -Name "pip.ini" -ItemType "file" -Force -Value "[global]`nindex-url = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple`n`ntrusted-host = artifactory.inspol.biz`n               pypi.python.org`n               pypi.org`n               files.pythonhosted.org`n`n[install]`nfind-links = https://artifactory.inspol.biz/api/pypi/pypi/simple" > $null
 }
+
+Write-Output "####### Update PIP before install RF #######"
+if (Get-Command "py" -ErrorAction SilentlyContinue) { 
+    py -m pip install -U pip wheel setuptools 
+
+}
+else {
+    python -m pip install -U pip wheel setuptools
+    
+}
