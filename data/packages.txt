@@ -24,6 +24,7 @@ requests3
 robotframework
 robotframework-archivelibrary
 robotframework-databaselibrary
+robotframework-excel
 robotframework-faker
 robotframework-ftplibrary
 robotframework-httplibrary
