@@ -17,5 +17,6 @@ else {
 }
 
 copyRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/master/RIDE-2.7.cmd $env:HOMEDRIVE/RIDE-2.7.cmd
+copyRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/master/RIDE-2.7.cmd $env:USERPROFILE/Desktop/RIDE-2.7.cmd
 
 Write-Output "####### to start RIDE using Python 2.7 execute shortcut from Home Dir `n`n$env:HOMEDRIVE/$f`n`n#######"
