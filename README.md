@@ -1,3 +1,18 @@
+- [Install Robotframework](#install-robotframework)
+  * [With Admin Rights](#with-admin-rights)
+  * [Without Admin Rights](#without-admin-rights)
+    + [1 Recomended Solution Robot Framework Python 3.X  x64](#1-recomended-solution-robot-framework-python-3x--x64)
+      - [1.1 Install Python 3.X x64](#11-install-python-3x-x64)
+      - [1.2 Install/Setup Git Robot Framework](#12-install-setup-git-robot-framework)
+    + [2 Legacy Solution for Robot Python 2.7](#2-legacy-solution-for-robot-python-27)
+      - [2.1 Python x64](#21-python-x64)
+      - [2.2 Visual Compiler for Python](#22-visual-compiler-for-python)
+      - [2.3 Install/Setup Git Robot Framework](#23-install-setup-git-robot-framework)
+      - [2.4 JAVA_JDK require ADMIN](#24-java-jdk-require-admin)
+- [How to](#how-to)
+  * [Open Powershell](#open-powershell)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 # Install Robotframework 
