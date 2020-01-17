@@ -35,7 +35,7 @@ robotframework-appiumlibrary
 robotframework-archivelibrary
 #robotframework-autoitlibrary
 robotframework-databaselibrary
-robotframework-excel
+robotframework-excellib
 robotframework-faker
 robotframework-ftplibrary
 robotframework-httplibrary
