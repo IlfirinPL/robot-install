@@ -1,9 +1,8 @@
 adodbapi
 anymarkup
 cffi
-cffi
 colorama
-coverage==4.2
+coverage>=4.2
 cparser 
 Cython
 datetime
