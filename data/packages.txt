@@ -60,3 +60,4 @@ wxPython
 xlrd
 xlutils 
 xlwt
+webdrivermanager
