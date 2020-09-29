@@ -14,4 +14,7 @@ if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) ) {
     # https://chocolatey.org/install
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
+
+
+choco source list 
 choco --version 

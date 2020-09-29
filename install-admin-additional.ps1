@@ -3,7 +3,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco install putty.install -y
 choco install 7zip.install -y
 choco install vscode -y
-choco install microsoft-visual-cpp-build-tools -y
 choco install dbeaver -y
 choco install tortoisegit -y
 choco install doublecmd -y
