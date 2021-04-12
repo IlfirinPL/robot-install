@@ -26,21 +26,3 @@ sourceRemote https://raw.githubusercontent.com/IlfirinPL/robot-install/$Env:bran
 explorer.exe $env:HOMEDRIVE
 
 timerStop  "### Installation Done. Time used: $(NEW-TIMESPAN -Start $StartDate -End (GET-DATE))"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

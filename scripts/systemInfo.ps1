@@ -1,18 +1,22 @@
 #Get-ChildItem env:
-Write $env:USERNAME
-Write $env:JAVA_HOME
-#Write $env:Path
+
+$hash = [ordered]@{}
+
+$hash["USERNAME"] = $env:USERNAME
+$hash["JAVA_HOME"] = $env:JAVA_HOME
+$hash["Choco"] = choco --version
+$python_version = py --version
+$python_bits = py -c "import struct; print(struct.calcsize('P')*8)"
+$hash["Python"] = "$python_version-$python_bits"
+$hash["Robot"] = py -m robot --version
+
 py -0p
-py --version
-py -c "import struct; print(struct.calcsize('P')*8)"
-py -m robot --version
-Write-Host Git Chocolaty
-choco --version
+
 if (-Not (Get-Command "git" -ErrorAction SilentlyContinue)) {
-    Write-Host Git Version
-    git --version
+    $hash["GIT"] = git --version
 }
 if (Get-Command "npm" -ErrorAction SilentlyContinue) {
-    Write-Host npm Version
-    npm --version
+    $hash["NPM"] = npm --version
 }
+
+$hash.GetEnumerator() | sort -Property name
