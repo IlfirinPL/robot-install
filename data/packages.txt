@@ -34,6 +34,5 @@ requests3
 selenium
 sqlalchemy_pyodbc_mssql
 unicodecsv
-virtualenv
 xlutils
 xlwt

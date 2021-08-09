@@ -1,8 +1,5 @@
-#robotframework-ride
-git+https://github.com/robotframework/RIDE.git
 robotframework-lsp
-robotframeworklexer
+robotframework-robocop
 robotframework-debuglibrary
 robotframework-tidy
-wxPython
 webdrivermanager
