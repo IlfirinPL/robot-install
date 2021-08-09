@@ -2,4 +2,8 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/IlfirinPL/robot-install
 py -m pip install -q -U --no-deps webdrivermanager
 $env:Path += ";C:\Python39\scripts;${env:LOCALAPPDATA}\Programs\Python\Python39\scripts"
 webdrivermanager chrome firefox edge
-Copy-Item $env:LOCALAPPDATA\salabs_\WebDriverManager\bin\* C:\Python39
+
+$temp = python -c "import sys; print(sys.executable)"
+$pythonPath = $temp -replace "\\python.exe", ""
+Write-Output    "Using Python path $pythonPath"
+Copy-Item $env:LOCALAPPDATA\salabs_\WebDriverManager\bin\* $pythonPath
