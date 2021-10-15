@@ -1,5 +1,5 @@
 Write-Output "####### Setup Chocolatey #######"
-if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) ) { 
+if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) ) {
     Set-ExecutionPolicy Bypass -Scope Process -Force;
     # Set directory for installation - Chocolatey does not lock
     # down the directory if not the default
@@ -15,6 +15,4 @@ if (-Not (Get-Command "choco" -ErrorAction SilentlyContinue) ) {
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
-
-choco source list 
-choco --version 
+choco --version
