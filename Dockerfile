@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM ubuntu:20.04
 WORKDIR /usr/src/app
 
 COPY data/* ./
