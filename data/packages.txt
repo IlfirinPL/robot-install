@@ -21,17 +21,13 @@ paramiko
 pillow
 pipdeptree
 psutil
-psycopg2
 Pygments
-PyMySQL
 pyodbc
 PyPDF2
 Pypubsub
 python-dateutil
 pywin32-ctypes
 pyyaml
-requests3
-selenium
 sqlalchemy_pyodbc_mssql
 unicodecsv
 xlutils
