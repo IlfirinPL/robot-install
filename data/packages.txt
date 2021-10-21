@@ -22,7 +22,6 @@ pillow
 pipdeptree
 psutil
 Pygments
-pyodbc
 PyPDF2
 Pypubsub
 python-dateutil
