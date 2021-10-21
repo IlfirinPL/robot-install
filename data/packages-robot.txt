@@ -1,7 +1,5 @@
 robotframework
-#robotframework-appiumlibrary
 robotframework-archivelibrary
-robotframework-autoitlibrary
 robotframework-databaselibrary
 robotframework-faker
 robotframework-ftplibrary
