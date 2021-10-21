@@ -3,7 +3,8 @@ WORKDIR /usr/src/app
 
 COPY data/* ./
 RUN apt-get update && apt-get install -y \
-    python3-pip
+    python3-pip \
+    python3-pyodbc
 RUN pip3 install --no-cache-dir -U pip wheel setuptools
 RUN pip3 install --no-cache-dir -U -r packages.txt
 RUN pip3 install --no-cache-dir -U -r packages-robot.txt
