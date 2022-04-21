@@ -13,5 +13,3 @@ robotframework-requests
 robotframework-screencaplibrary
 robotframework-seleniumlibrary
 robotframework-sshlibrary
-robotremoteserver
-rpaframework
