@@ -11,5 +11,5 @@ robotframework-MarcinKoperski
 robotframework-pabot
 robotframework-requests
 robotframework-screencaplibrary
-robotframework-seleniumlibrary
+robotframework-seleniumlibrary>=6.0.0
 robotframework-sshlibrary

@@ -1,2 +1,2 @@
 robotremoteserver
-rpaframework
+rpaframework>=14.1.1

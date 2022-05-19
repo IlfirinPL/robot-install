@@ -27,6 +27,7 @@ Pypubsub
 python-dateutil
 pywin32-ctypes
 pyyaml
+selenium>=4.0.0
 sqlalchemy_pyodbc_mssql
 unicodecsv
 xlutils
