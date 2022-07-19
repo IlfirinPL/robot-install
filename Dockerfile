@@ -8,9 +8,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install --no-cache-dir -U pip wheel setuptools
 RUN pip3 install --no-cache-dir -U --upgrade-strategy eager \
     -r ./packages-robot.txt \
-    -r ./rpa.txt \
-    --no-deps robotframework \
-    --no-deps setuptools
+    -r ./ide.txt
 
 RUN rm -rf /usr/src/app/*
 
