@@ -3,13 +3,11 @@ robotframework-archivelibrary
 robotframework-databaselibrary
 robotframework-faker
 robotframework-ftplibrary
-robotframework-httplibrary
 robotframework-imaplibrary
-robotframework-jsonlibrary
 robotframework-keepasslibrary
 robotframework-MarcinKoperski
 robotframework-pabot
-robotframework-requests
 robotframework-screencaplibrary
-robotframework-seleniumlibrary>=6.0.0
+robotframework-seleniumlibrary
 robotframework-sshlibrary
+rpaframework>=15.4.0
