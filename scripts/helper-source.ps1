@@ -12,7 +12,7 @@ function Unzip { param([string]$zipfile, [string]$outpath)   [System.IO.Compress
 $ProgressPreference = 'SilentlyContinue'
 
 if (!(Test-Path Env:PY_PYTHON)) {
-    $Env:PY_PYTHON = "3.9"
+    $Env:PY_PYTHON = "3.10"
 }
 if (!(Test-Path Env:branch)) {
     $BRANCH = "master"

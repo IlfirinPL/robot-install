@@ -1,4 +1,4 @@
-$version = "3.9.8"
+$version = "3.10.7"
 $url = "https://www.python.org/ftp/python/" + $version + "/python-" + $version + "-amd64.exe"
 $output = "$env:TEMP"
 $start_time = Get-Date; Import-Module BitsTransfer
