@@ -1,11 +1,19 @@
 {
     "cSpell.words": [
         "archivelibrary",
+        "devcontainers",
         "imaplibrary",
+        "isort",
         "keepasslibrary",
+        "pylance",
+        "pylint",
+        "robocorp",
         "rpaframework",
         "screencaplibrary",
         "seleniumlibrary",
-        "sshlibrary"
+        "shakram",
+        "sshlibrary",
+        "Tyriar",
+        "wmaurer"
     ]
 }

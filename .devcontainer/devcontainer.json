@@ -18,13 +18,13 @@
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 	"extensions": [
-		"shakram02.bash-beautify",
 		"ms-python.isort",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
 		"robocorp.robotframework-lsp",
+		"shakram02.bash-beautify",
+		"streetsidesoftware.code-spell-checker",
 		"Tyriar.sort-lines",
 		"wmaurer.change-case",
-		"wmaurer.change-case",
-		"ms-python.vscode-pylance",
-		"ms-python.python"
 	],
 }
