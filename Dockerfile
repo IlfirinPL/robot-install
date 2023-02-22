@@ -1,5 +1,7 @@
 FROM ubuntu:22.04
 WORKDIR /usr/src/app
+ENV DEBIAN_FRONTEND noninteractive
+
 
 COPY data/* ./
 
@@ -9,8 +11,8 @@ RUN apt-get update && apt-get install -y \
     python3-pyodbc \
     python3.11
 
-RUN python3.11 -m pip3 install --no-cache-dir -U pip wheel setuptools
-RUN python3.11 -m pip3 install --no-cache-dir -U --upgrade-strategy eager \
+RUN python3.11 -m pip install --no-cache-dir -U pip wheel setuptools
+RUN python3.11 -m pip install --no-cache-dir -U --upgrade-strategy eager \
     -r ./packages-robot.txt \
     -r ./ide.txt \
     -r ./support_tools.txt
