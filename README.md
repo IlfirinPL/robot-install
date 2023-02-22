@@ -1,3 +1,5 @@
+[![Docker Image CI](https://github.com/IlfirinPL/robot-install/actions/workflows/docker-image.yml/badge.svg)](https://github.com/IlfirinPL/robot-install/actions/workflows/docker-image.yml)
+
 - [Install Robotframework](#install-robotframework)
   * [With Admin Rights](#with-admin-rights)
   * [Without Admin Rights](#without-admin-rights)
