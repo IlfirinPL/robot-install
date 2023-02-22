@@ -21,8 +21,8 @@ jobs:
         push: false
         tags: robot:latest
 
-    - name: Run Docker container
+    - name: Run Docker container and self test
       uses: docker/metadata-action@master
       with:
         images: robot:latest
-        entrypoint: tests/self-test.robot
+        entrypoint: robot tests
