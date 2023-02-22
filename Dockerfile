@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 COPY . /app
 
-RUN pip install  --update \
+RUN pip install \
     -r /app/packages-robot.txt \
     -r /app/ide.txt \
     -r /app/support_tools.txt
