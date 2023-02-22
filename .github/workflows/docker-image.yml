@@ -19,7 +19,7 @@ jobs:
       with:
         context: .
         push: false
-        tags: robot:latest robot:$(date +%s)
+        tags: robot:latest
 
     - name: Run Docker container
       uses: docker/metadata-action@master
