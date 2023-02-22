@@ -7,14 +7,22 @@ on:
     branches: [ master ]
 
 jobs:
-
-  build:
-
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@main
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag robot:$(date +%s) --tag robot:latest
-    - name: Test and Print Version
-      run: docker run robot:latest --version
+    - name: Checkout code
+      uses: actions/checkout@main
+
+    - name: Build Docker image
+      uses: docker/build-push-action@main
+      with:
+        context: .
+        push: false
+        tags: robot:latest robot:$(date +%s)
+
+    - name: Run Docker container
+      uses: docker/metadata-action@main
+      with:
+        images: robot:latest
+        entrypoint: python3.11 -m robot.run --version
