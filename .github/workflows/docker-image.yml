@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@main
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag robot:$(date +%s)
+      run: docker build . --file Dockerfile --tag robot:$(date +%s) --tag robot:latest
+    - name: Test and Print Version
+      run: docker run robot:latest --version

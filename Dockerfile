@@ -20,4 +20,4 @@ RUN python3.11 -m pip install --no-cache-dir -U --upgrade-strategy eager \
 
 RUN rm -rf /usr/src/app/*
 
-CMD [ "python3.11", "-m","robot.run","." ]
+CMD [ "python3.11", "-m","robot.run"]
