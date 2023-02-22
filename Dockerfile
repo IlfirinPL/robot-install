@@ -5,8 +5,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 COPY data/* ./
 
+RUN apt-get update && apt-get install -y apt-utils
+
 RUN apt-get update && apt-get install -y \
-    apt-utils \
     python3-pip \
     python3-pyodbc \
     python3.11
