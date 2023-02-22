@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ master ]
 
+
+env:
+  IMAGE_NAME: robot
+
 jobs:
   build-and-run:
     runs-on: ubuntu-latest
@@ -19,10 +23,10 @@ jobs:
       with:
         context: .
         push: false
-        tags: robot:latest
+        tags: ${{ env.IMAGE_NAME }}:latest
 
-    - name: Run Docker container and self test
-      uses: docker/metadata-action@master
-      with:
-        images: robot:latest
-        entrypoint: robot tests
+    - name: Run Docker Execute Self Test
+      run: |
+          docker run --rm \
+          -e MY_ENV_VAR=my_value \
+          ${GITHUB_REPOSITORY}:${{ steps.docker_metadata.outputs.digest }} tests
