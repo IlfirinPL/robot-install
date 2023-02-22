@@ -4,9 +4,11 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND noninteractive
 
 
-COPY . /app
+COPY * /app
 
-RUN pip install \
+RUN pip install --upgrade pip
+
+RUN pip install --upgrade \
     -r /app/packages-robot.txt \
     -r /app/ide.txt \
     -r /app/support_tools.txt
