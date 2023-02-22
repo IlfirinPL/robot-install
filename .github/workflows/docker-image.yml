@@ -15,14 +15,14 @@ jobs:
       uses: actions/checkout@main
 
     - name: Build Docker image
-      uses: docker/build-push-action@main
+      uses: docker/build-push-action@master
       with:
         context: .
         push: false
         tags: robot:latest robot:$(date +%s)
 
     - name: Run Docker container
-      uses: docker/metadata-action@main
+      uses: docker/metadata-action@master
       with:
         images: robot:latest
         entrypoint: python3.11 -m robot.run --version
