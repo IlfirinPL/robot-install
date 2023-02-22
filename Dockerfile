@@ -1,23 +1,14 @@
-FROM ubuntu:22.04
-WORKDIR /usr/src/app
+FROM python:3.11
+
+WORKDIR /app
 ENV DEBIAN_FRONTEND noninteractive
 
 
-COPY data/* ./
+COPY . /app
 
-RUN apt-get update && apt-get install -y apt-utils
+RUN pip install  -U --upgrade-strategy eager \
+    -r /app/packages-robot.txt \
+    -r /app/ide.txt \
+    -r /app/support_tools.txt
 
-RUN apt-get update && apt-get install -y \
-    python3-pip \
-    python3-pyodbc \
-    python3.11
-
-RUN python3.11 -m pip install --no-cache-dir -U pip wheel setuptools
-RUN python3.11 -m pip install --no-cache-dir -U --upgrade-strategy eager \
-    -r ./packages-robot.txt \
-    -r ./ide.txt \
-    -r ./support_tools.txt
-
-RUN rm -rf /usr/src/app/*
-
-CMD [ "python3.11", "-m","robot.run"]
+ENTRYPOINT [ "robot"]
