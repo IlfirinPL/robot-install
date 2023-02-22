@@ -8,7 +8,8 @@ py -m pip install --upgrade `
     -r ./data/packages-robot.txt `
     -r ./data/ide.txt `
     -r ./data/support_tools.txt `
-    ./bin/lxml-4.9.0-cp311-cp311-win_amd64.whl
+
+py -m pip install --upgrade robotframework
 
 py -m webdrivermanager chrome firefox
 
