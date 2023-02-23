@@ -10,4 +10,4 @@ robotframework-pabot
 robotframework-screencaplibrary
 robotframework-seleniumlibrary
 robotframework-sshlibrary
-rpaframework>=15.9.0
+rpaframework>=22.0.0
