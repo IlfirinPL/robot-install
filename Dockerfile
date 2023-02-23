@@ -1,12 +1,12 @@
 FROM python:3.11
 
-WORKDIR /app
-ENV DEBIAN_FRONTEND noninteractive
 
+ENV DEBIAN_FRONTEND noninteractive
+RUN pip install --upgrade pip
+
+WORKDIR /app
 
 COPY . /app
-
-RUN pip install --upgrade pip
 
 RUN pip install --upgrade \
     -r /app/data/packages-robot.txt \
