@@ -4,6 +4,7 @@ FROM python:3.11
 ENV DEBIAN_FRONTEND noninteractive
 RUN pip install --upgrade pip
 
+
 WORKDIR /app
 
 COPY . /app
